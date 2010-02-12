@@ -5,28 +5,17 @@ $(document).ready(function() {
        console.log(settings);
        return(value);
     }, { 
-       type    : 'textarea',
-       cssclass : 'intro',
-       submit  : 'OK',
+       type      : "test",
+       submit    : 'OK',
+       cancel    : 'Cancel',
+       tooltip   : "Click to edit...",
+       onblur    : "ignore",
+       markitup  : markitupHTML
    });
- $('h1').editable(function(value, settings) { 
-      console.log(this);
-      console.log(value);
-      console.log(settings);
-      return(value);
-   }, { 
-      type    : 'textarea',
-      cssclass : 'title',
-      submit  : 'OK',
-  });
-  $('p').editable(function(value, settings) { 
-       console.log(this);
-       console.log(value);
-       console.log(settings);
-       return(value);
-    }, { 
-       type    : 'textarea',
-       cssclass : 'paragraph',
-       submit  : 'OK',
-   });
+    $.editable.addInputType('test', {
+        element : $.editable.types.textarea.element,
+        plugin  : function(settings, original) {
+            $('textarea', this).markItUp(settings.markitup);
+        }
+    });
 });
