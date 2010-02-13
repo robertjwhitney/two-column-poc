@@ -1,8 +1,5 @@
 @import _reset.sass
 
-=editable
-  &:hover
-    :background url('/images/pencil.png') #FFFDCE no-repeat 99% 95%
     
 body
   :font-family "Georgia", "Times", serif
@@ -28,31 +25,32 @@ p
     :font-weight bold
     :margin 40px 0 35px
     :text-transform uppercase
-    +editable
   p
     :font-size 18px
-    +editable
-
+    
 .page
-  :border-bottom 2px solid #ccc
-  :height 1040px
+  :border-bottom 50px solid #fff
+  :border-top 25px solid #fff
+  :height 1050px
   :overflow hidden
-  :padding 25px 0 50px
-  .columns
-    :padding-top 25px
-    :column-count 2
-    :column-gap 50px
+
+.page-break
+  :border-top 1px solid #eee
+  :height 1px
+  
+.col
+  :float left
+  :height 1050px
+  :margin 0 25px
+  :width 400px
+  //
+    .columns
+      :padding-top 25px
+      :column-count 2
+      :column-gap 50px
   p
-    +editable
   .margins
     :margin-left 25px
-  .left
-    :float left
-    :width 400px
-    :margin-right 50px
-  .right
-    :float left
-    :width 400px
   .num
     :display inline-block
     :text-align center
