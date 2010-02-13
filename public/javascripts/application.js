@@ -12,7 +12,7 @@ $(document).ready(function(){
     var heightDiff = - (textHeight + (colHeight - textHeight) + 1);
   //calculate a page count
     var pageCount = (Math.ceil(textHeight/colHeight));
-  //while i is greater than the Col count
+  //while i is greater than the page count
     for ( i = 1; i < pageCount; i++) {
       //create a new div id of Col + i
       var newCol = "col" + i;
